@@ -7,34 +7,26 @@
     <div class="row text-center">
       <p class="p-position center">{{person.position}}</p>
     </div>
-  </div>
-  <div id="contact-container">
-    <div class="two-section">
-      <div class="left">
-        <table>
-          <tr>
-            <td><i class="fa fa-envelope" aria-hidden="true"></i></td>
-            <td><a :href="'mailto:'+person.contact.email" target="_blank">{{person.contact.email}}</a></td>
-          </tr>
-          <tr v-if="person.contact.phone">
-            <td><i class="fa fa-phone" aria-hidden="true"></i></td>
-            <td><a :href="'tel:'+person.contact.phone">{{person.contact.phone}}</a></td>
-          </tr>
-        </table>
+    <!-- <div id="contact" class="row">
+      <div class="section-four">
+        <div class="quater">
+          <i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;
+          <a :href="'mailto:'+person.contact.email" target="_blank">{{person.contact.email}}</a>
+        </div>
+        <div class="quater text-center">
+          <i class="fa fa-phone" aria-hidden="true"></i>&nbsp;
+          <a :href="'tel:'+person.contact.phone">{{person.contact.phone}}</a>
+        </div>
+        <div class="quater text-center">
+          <i class="fa fa-github" aria-hidden="true"></i>&nbsp;
+          <a :href="'https://github.com/'+person.contact.github" target="_blank">{{person.contact.github}}</a>
+        </div>
+        <div class="quater text-center">
+          <i class="fa fa-bitbucket" aria-hidden="true"></i>&nbsp;
+          <a :href="'https://bitbucket.org/'+person.contact.bitbucket" target="_blank">{{person.contact.bitbucket}}</a>
+        </div>
       </div>
-      <div class="right">
-        <table>
-          <tr v-if="person.contact.github">
-            <td><i class="fa fa-github" aria-hidden="true"></i></td>
-            <td><a :href="'https://github.com/'+person.contact.github" target="_blank">github.com/{{person.contact.github}}</a></td>
-          </tr>
-          <tr v-if="person.contact.bitbucket">
-            <td><i class="fa fa-bitbucket" aria-hidden="true"></i></td>
-            <td><a :href="'https://bitbucket.org/'+person.contact.bitbucket" target="_blank">bitbucket.org/{{person.contact.bitbucket}}</a></td>
-          </tr>
-        </table>
-      </div>
-    </div>
+    </div> -->
   </div>
   <div id="apps_libs-container">
     <div id="apps_libs-title" class="bold uppercase">Open Source</div>
@@ -125,7 +117,7 @@ export default Vue.component(name, getVueOptions(name));
   padding: 0px 0px 20px;
 }
 .black-bar {
-  height: 140px;
+  height: 136px;
   background-color: #3f3f3f;
   margin-bottom: 20px;
   span {
@@ -141,7 +133,7 @@ export default Vue.component(name, getVueOptions(name));
 .name {
   text-transform:lowercase;
   padding: 18px 0px 0px 0px;
-  margin-bottom: 5px;
+  margin-bottom: 6px;
   font-size: 42px;
   font-weight: 500;
   color: #FFFF;
@@ -151,7 +143,7 @@ export default Vue.component(name, getVueOptions(name));
   text-transform: uppercase;
   font-size: 16px;
   color: #FFFF;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   letter-spacing: 2px;
 }
 a {
@@ -162,6 +154,14 @@ a {
 }
 .bold {
   font-weight: bold;
+}
+.section-four {
+  display: table;
+  width: 100%;
+  .quater {
+    display: table-cell;
+    width: 25%;
+  }
 }
 .two-section {
   display: table;
@@ -237,7 +237,10 @@ a {
   font-size: 24px;
   margin-left: 6px;
 }
-#contact-container {
-  margin-bottom: 20px;
+#contact {
+  color: white;
+  a {
+    color: white;
+  }
 }
 </style>
