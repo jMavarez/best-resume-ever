@@ -1,7 +1,6 @@
 import yaml from 'js-yaml';
-import {
-  PERSON
-} from '../../resume/data.yml';
+import { PERSON } from '../../resume/data-en.yml';
+// import { PERSON } from '../../resume/data-es.yml';
 import {
   terms
 } from '../terms';

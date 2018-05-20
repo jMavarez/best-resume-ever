@@ -1,0 +1,140 @@
+/* #*/ export const PERSON = `
+name:
+  first: Josué
+  middle:
+  last: Mavárez
+# about: Hi, my name is John Doe. I"m just about the most boring type of person you could
+#       possibly imagine. I like collecting leaves from the tree in my back yard and documenting
+#       each time I eat a peanut that is non-uniform. I am not a robot. Please hire me.
+position: Software Engineer
+
+birth:
+  year: 1995
+  location: Buenos Aires, Argentina
+
+experience:
+- company: Baufest
+  position: Software Engineer
+  technologies: Android, Angular, React
+  timeperiod: 2018 - now
+  location: Buenos Aires, Argentina
+  website: http://www.baufest.com/
+  description: Front-end developer. From mock-ups to production. React / Angular.
+  milestones:
+    - description:
+
+- company: EduTech de Centro América
+  position: Fullstack Developer
+  technologies: Angular, Android, PHP, MySQL
+  timeperiod: 2016 - 2018
+  location: San José, Costa Rica
+  website: http://www.edutechca.com/
+  description: Fullstack developer. Android SDK / RxJava / OkHttp / Angular / PHP / MySQL.
+  milestones:
+    - description:
+    - description:
+
+- company: Humbee Partners
+  position: Android Developer
+  technologies: Android
+  timeperiod: 2017
+  location: Maracaibo, Venezuela
+  website: http://humbee.co/
+  description: Freelance Android Developer. Java / Kotlin / RxJava.
+  milestone:
+    - description:
+
+# - company: WEBRAND 04
+#   position: Web Developer
+#   technologies: Angularjs, HTML, CSS, JavaScript
+#   timeperiod: 2016 - now
+#   location: Maracaibo, Venezuela
+#   description: Desarrollo de paginas web utilizando HTML, CSS y JavaScript.
+
+- company: eSocialTech
+  position: Android Developer
+  technologies: Android, PHP, MySQL
+  timeperiod: 2015 - 2016
+  location: Maracaibo, Venezuela
+  description: Fullstack developer. Android SDK / SQLite / OkHttp / Angular / PHP.
+
+- company: Mega Software C.A
+  position: Android Developer
+  technologies: Android
+  timeperiod: 2015
+  location: Maracaibo, Venezuela
+  description: Making coffee and baking cookies.
+
+- company: IPSIS
+  position: Android Developer
+  technologies: Android
+  timeperiod: 2015
+  location: Maracaibo, Venezuela
+  description: Making coffee and baking cookies.
+
+education:
+- degree: Bachelor of Science in Computer Engineering
+  timeperiod: 2012 - 2016
+  description: Universidad Rafael Belloso Chacín. Maracaibo, Venezuela.
+
+- degree: English Certification
+  timeperiod: 2014
+  description: EPT - B Test University of Michigan. Centro Electrónico de Idiomas. Maracaibo, Venezuela.
+
+apps_libs:
+  - title: Tana
+    description: Bringing the Picture-in-Picture experience to desktop.
+    link: https://github.com/jMavarez/Tana
+  - title: Material Calendar
+    description: A Material design calendar inspired on the CalendarView of School Diary.
+    link: https://github.com/jMavarez/MaterialCalendar
+
+# skill level goes 0 to 100
+skills:
+- name: Android SDK
+  level: 90
+- name: Java
+  level: 85
+- name: Kotlin
+  level: 70
+# - name: RxJava
+#   level: 70
+# - name: OkHttp
+#   level: 70
+# - name: Retrofit
+#   level: 70
+# - name: Dagger 2
+#   level: 50
+- name: JavaScript
+  level: 90
+- name: TypeScript
+  level: 90
+- name: Angular
+  level: 95
+- name: Node.js
+  level: 70
+- name: HTML
+  level: 90
+- name: CSS
+  level: 70
+- name: PHP
+  level: 90
+- name: MySQL
+  level: 100
+- name: MongoDB
+  level: 50
+
+contact:
+  email: josuemavarez@gmail.com
+  phone: +54 11 3151 4340
+  street: Buenos Aires
+  city: Argentina
+  # website: # johndoe.com
+  github: jMavarez
+  bitbucket: josueMavarez
+  # telegram: JosueMavarez
+  skype: jdma0512
+  linkedin: josue-mavarez
+  stackoverflow: josue-mavarez
+lang: en
+`
