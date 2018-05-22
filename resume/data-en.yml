@@ -1,8 +1,8 @@
 /* #*/ export const PERSON = `
 name:
-  first: Josué
+  first: Josue
   middle:
-  last: Mavárez
+  last: Mavarez
 # about: Hi, my name is John Doe. I"m just about the most boring type of person you could
 #       possibly imagine. I like collecting leaves from the tree in my back yard and documenting
 #       each time I eat a peanut that is non-uniform. I am not a robot. Please hire me.
@@ -21,7 +21,7 @@ experience:
   website: http://www.baufest.com/
   description: Front-end developer. From mock-ups to production. React / Angular.
   milestones:
-    - description:
+    - description: Main developer of an ecommerce-like website. Built from scratch a new version of the portal YouMarket using ReactJS, Axios and Rxjs to name a few.
 
 - company: EduTech de Centro América
   position: Fullstack Developer
@@ -31,8 +31,10 @@ experience:
   website: http://www.edutechca.com/
   description: Fullstack developer. Android SDK / RxJava / OkHttp / Angular / PHP / MySQL.
   milestones:
-    - description:
-    - description:
+    - description: Maintenance of their Android app CloudCampus. Improved UI design, implemented new features.
+      link_text: CloudCampus
+      link: https://play.google.com/store/apps/details?id=com.edutechca.cloudcampus&hl=en
+    - description: Lead developer of a Trello-like project. Plan manager for teachers to keep their study plans organized, keep track of lessons and get some feedback from principals or teachers.
 
 - company: Humbee Partners
   position: Android Developer
@@ -41,43 +43,28 @@ experience:
   location: Maracaibo, Venezuela
   website: http://humbee.co/
   description: Freelance Android Developer. Java / Kotlin / RxJava.
-  milestone:
-    - description:
-
-# - company: WEBRAND 04
-#   position: Web Developer
-#   technologies: Angularjs, HTML, CSS, JavaScript
-#   timeperiod: 2016 - now
-#   location: Maracaibo, Venezuela
-#   description: Desarrollo de paginas web utilizando HTML, CSS y JavaScript.
-
-- company: eSocialTech
-  position: Android Developer
-  technologies: Android, PHP, MySQL
-  timeperiod: 2015 - 2016
-  location: Maracaibo, Venezuela
-  description: Fullstack developer. Android SDK / SQLite / OkHttp / Angular / PHP.
-
-- company: Mega Software C.A
-  position: Android Developer
-  technologies: Android
-  timeperiod: 2015
-  location: Maracaibo, Venezuela
-  description: Making coffee and baking cookies.
+  milestones:
+    - description: Join the team as an outsource developer helping debug their app PAZIO. Improved their GpsService implementation. Added new features from mock-ups to production.
+      link_text: PAZIO
+      link: https://play.google.com/store/apps/details?id=com.pazio&hl=en
 
 - company: IPSIS
   position: Android Developer
   technologies: Android
   timeperiod: 2015
   location: Maracaibo, Venezuela
-  description: Making coffee and baking cookies.
+  description: Freelance Android Developer. Java / Kotlin / RxJava / Room.
+  milestones:
+    - description: Developed an app which controls RTUs (Remote terminal units) by SMS messages. Released 3 version of this app the latest being called KAI. <i>The app was not published to the PlayStore due to client's request.</i>
+      link_text: KAI
+      link: https://bitbucket.org/josueMavarez/kai-temperatura/
 
 education:
 - degree: Bachelor of Science in Computer Engineering
   timeperiod: 2012 - 2016
-  description: Universidad Rafael Belloso Chacín. Maracaibo, Venezuela.
+  description: Universidad Dr. Rafael Belloso Chacín. Maracaibo, Venezuela.
 
-- degree: English Certification
+- degree: English Certificate
   timeperiod: 2014
   description: EPT - B Test University of Michigan. Centro Electrónico de Idiomas. Maracaibo, Venezuela.
 
@@ -86,7 +73,7 @@ apps_libs:
     description: Bringing the Picture-in-Picture experience to desktop.
     link: https://github.com/jMavarez/Tana
   - title: Material Calendar
-    description: A Material design calendar inspired on the CalendarView of School Diary.
+    description: A Material design calendar inspired by the CalendarView of School Diary.
     link: https://github.com/jMavarez/MaterialCalendar
 
 # skill level goes 0 to 100
@@ -127,12 +114,12 @@ skills:
 contact:
   email: josuemavarez@gmail.com
   phone: +54 11 3151 4340
+  location: Buenos Aires, Argentina
   street: Buenos Aires
   city: Argentina
   # website: # johndoe.com
   github: jMavarez
   bitbucket: josueMavarez
-  # telegram: JosueMavarez
   skype: jdma0512
   linkedin: josue-mavarez
   stackoverflow: josue-mavarez

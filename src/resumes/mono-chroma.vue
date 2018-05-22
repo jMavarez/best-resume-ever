@@ -7,38 +7,6 @@
     <div class="row text-center">
       <p class="p-position center">{{person.position}}</p>
     </div>
-    <!-- <div id="contact" class="row">
-      <div class="section-four">
-        <div class="quater">
-          <i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;
-          <a :href="'mailto:'+person.contact.email" target="_blank">{{person.contact.email}}</a>
-        </div>
-        <div class="quater text-center">
-          <i class="fa fa-phone" aria-hidden="true"></i>&nbsp;
-          <a :href="'tel:'+person.contact.phone">{{person.contact.phone}}</a>
-        </div>
-        <div class="quater text-center">
-          <i class="fa fa-github" aria-hidden="true"></i>&nbsp;
-          <a :href="'https://github.com/'+person.contact.github" target="_blank">{{person.contact.github}}</a>
-        </div>
-        <div class="quater text-center">
-          <i class="fa fa-bitbucket" aria-hidden="true"></i>&nbsp;
-          <a :href="'https://bitbucket.org/'+person.contact.bitbucket" target="_blank">{{person.contact.bitbucket}}</a>
-        </div>
-      </div>
-    </div> -->
-  </div>
-  <div id="apps_libs-container">
-    <div id="apps_libs-title" class="bold uppercase">Open Source</div>
-    <div class="section-bar">
-      <div class="left">
-        <span class="bold uppercase">APPLICATIONS AND LIBRARIES</span>
-      </div>
-    </div>
-    <div class="apps_libs" v-for="project in person.apps_libs" :key="project.title">
-      <div><a target="_blank" v-bind:href="project.link">{{project.title}}</a></div>
-      <div>{{project.description}}</div>
-    </div>
   </div>
   <div id="experience-container">
     <div id="experience-title" class="bold uppercase">PROFESSIONAL EXPERIENCE</div>
@@ -66,14 +34,36 @@
             <i class="fa fa-globe"></i>&nbsp;<span class="location">{{experience.location}}</span>
           </div>
         </div>
+        <div class="experience-description">
+          <ul id="milestones">
+            <div class="milestone" v-for="milestone in experience.milestones" :key="milestone.description" >
+              <li v-html="milestone.description"></li>
+              <div>
+                <a target="_blank" v-bind:href="milestone.link">{{milestone.link_text}}</a>
+              </div>
+            </div>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
+  <div id="apps_libs-container">
+    <div id="apps_libs-title" class="bold uppercase">{{lang.side_projects}}</div>
+    <div class="section-bar">
+      <div class="left">
+        <span class="bold uppercase">APPLICATIONS AND LIBRARIES</span>
+      </div>
+    </div>
+    <div class="apps_libs" v-for="project in person.apps_libs" :key="project.title">
+      <div><a target="_blank" v-bind:href="project.link">{{project.title}}</a></div>
+      <div>{{project.description}}</div>
+    </div>
+  </div>
   <div id="experience-container">
-    <div id="experience-title" class="bold uppercase">EDUCATION</div>
+    <div id="experience-title" class="bold uppercase">{{lang.education}}</div>
     <div class="experience" v-for="education in person.education" :key="education.company">
       <div class="wrapper">
-        <div class="section-bar">
+        <div class="section-bar education">
           <div class="left">
             <span class="bold uppercase position">{{education.degree}}</span>
           </div>
@@ -98,6 +88,38 @@
       </div>
     </div>
   </div>
+  <div id="contact">
+    <div id="contact-title" class="bold uppercase">{{lang.contact}}</div>
+    <div class="two-section">
+      <div class="left">
+        <div >
+          <i class="fa fa-github" aria-hidden="true"></i>&nbsp;
+          <a :href="'https://github.com/'+person.contact.github" target="_blank">{{person.contact.github}}</a>
+        </div>
+        <div>
+          <i class="fa fa-bitbucket" aria-hidden="true"></i>&nbsp;
+          <a :href="'https://bitbucket.org/'+person.contact.bitbucket" target="_blank">{{person.contact.bitbucket}}</a>
+        </div>
+        <div>
+          <i class="fa fa-stack-overflow" aria-hidden="true"></i>&nbsp;
+          <a :href="'https://bitbucket.org/'+person.contact.bitbucket" target="_blank">{{person.contact.stackoverflow}}</a>
+        </div>
+      </div>
+      <div class="right float-right">
+        <div>
+          {{person.contact.location}}&nbsp;
+          <i class="fa fa-globe" aria-hidden="true"></i>
+        </div>
+        <div>
+          {{person.contact.email}}&nbsp;
+          <i class="fa fa-envelope" aria-hidden="true"></i>
+        </div>
+        <div>{{person.contact.phone}}&nbsp;
+          <i class="fa fa-phone" aria-hidden="true"></i>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 </template>
 
@@ -112,8 +134,10 @@ export default Vue.component(name, getVueOptions(name));
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="less" scoped>
+@fade-grey: #e2e2e2;
+
 .resume {
-  font-family: 'Roboto' !important;
+  font-family: "Roboto" !important;
   padding: 0px 0px 20px;
 }
 .black-bar {
@@ -125,29 +149,29 @@ export default Vue.component(name, getVueOptions(name));
   }
 }
 .row {
-  width:100%;
+  width: 100%;
 }
 .text-center {
-  text-align:center;
+  text-align: center;
 }
 .name {
-  text-transform:lowercase;
+  text-transform: lowercase;
   padding: 18px 0px 0px 0px;
   margin-bottom: 6px;
   font-size: 42px;
   font-weight: 500;
-  color: #FFFF;
+  color: #ffff;
   letter-spacing: 2px;
 }
 .p-position {
   text-transform: uppercase;
   font-size: 16px;
-  color: #FFFF;
+  color: #ffff;
   margin-bottom: 20px;
   letter-spacing: 2px;
 }
 a {
-  color: #229EB8;
+  color: #229eb8;
 }
 .uppercase {
   text-transform: uppercase;
@@ -165,48 +189,53 @@ a {
 }
 .two-section {
   display: table;
-  width: 754px;
-  .left, .right {
+  width: 722px;
+  .left,
+  .right {
     display: table-cell;
     height: inherit;
     padding: 0 8px;
-  }
-  .left {
-    width: 55%;
-  }
-  .right {
-    width: 45%;
+    width: 50%;
   }
   .description {
     font-size: 14px;
     font-style: italic;
   }
   .location {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 400;
   }
 }
+#milestones {
+  font-size: 14px;
+  margin-right: 48px;
+  .milestone {
+    margin-bottom: 6px;
+  }
+}
 #apps_libs-container {
-  margin: 0 20px 28px 20px;
+  margin: 0 36px 28px 36px;
 }
 .apps_libs {
   padding: 8px;
+  font-size: 14px;
   div:nth-child(2) {
     margin-left: 12px;
   }
 }
 .section-bar {
-  background-color: #f0f0f0;
+  background-color: @fade-grey;
   height: 28px;
   display: table;
-  width: 754px;
+  width: 100%;
   .left {
-    width: 55%;
+    width: 50%;
   }
   .right {
-    width: 45%;
+    width: 50%;
   }
-  .left, .right {
+  .left,
+  .right {
     display: table-cell;
     height: inherit;
     padding: 0 8px;
@@ -228,19 +257,49 @@ a {
   }
 }
 #experience-container {
-  margin: 0 20px 40px 20px;
+  margin: 0 36px 40px 36px;
   .experience {
     margin-bottom: 16px;
   }
 }
-#experience-title, #apps_libs-title {
+#experience-title,
+#apps_libs-title {
   font-size: 24px;
   margin-left: 6px;
 }
+#contact-title {
+  border-bottom: 2px solid @fade-grey;
+  margin: 0 6px 6px 6px;
+  font-size: 24px;
+}
 #contact {
-  color: white;
-  a {
-    color: white;
+  margin: 0 36px 20px 36px;
+  font-weight: 300;
+  .fa {
+    color: #424242;
+  }
+  .right,
+  .left {
+    display: table-cell;
+    height: inherit;
+    padding: 0 8px;
+    vertical-align: middle;
+    div:nth-child(n-1) {
+      margin-bottom: 6px;
+    }
+  }
+  .right {
+    float: right;
+    text-align: right;
+    width: 80%;
+  }
+}
+.education {
+  .left {
+    width: 60%;
+  }
+  .right {
+    width: 40%;
   }
 }
 </style>

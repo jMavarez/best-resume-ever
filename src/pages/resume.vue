@@ -17,13 +17,13 @@ export default Vue.component('resume', {
 </script>
 
 <style scoped>
-.page-inner{
+.page-inner {
   height: 100%;
   width: 100%;
 }
 .page-wrapper {
   overflow-x: hidden;
-  background: #CCCCCC;
+  background: #cccccc;
   margin: 0;
   padding: 0;
   -webkit-print-color-adjust: exact;
@@ -39,7 +39,7 @@ export default Vue.component('resume', {
   background: white;
   position: relative;
   width: 21cm;
-  height: 29.68cm;
+  height: 29.68cm; /* TODO: figure out autamatic pagination */
   display: block;
   page-break-after: auto;
   overflow: hidden;
