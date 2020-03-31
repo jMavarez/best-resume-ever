@@ -52,7 +52,9 @@ const convert = async () => {
       });
       await page.pdf({
         path: path.join(__dirname, '../pdf/' + dir.name + '.pdf'),
-        format: 'A4'
+        width: '21cm',
+      	height: '41.5cm',
+      	pageRanges: '1' /* Try to figure out, specific W and H for each CV (if not set, default) */
       });
       await browser.close();
     });

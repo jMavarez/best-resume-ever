@@ -5,6 +5,9 @@
       <span class="name">{&nbsp;&nbsp;{{person.name.first}}{{person.name.last}}&nbsp;&nbsp;}</span>
     </div>
     <div class="row text-center">
+      <p class="nat-age-wrapper center">{{person.nationality.name}}&nbsp;|&nbsp;AGE:&nbsp;{{calcAge(person.birth)}}</p>
+    </div>
+    <div class="row text-center">
       <p class="p-position center">{{person.position}}</p>
     </div>
   </div>
@@ -101,8 +104,8 @@
           <a :href="'https://bitbucket.org/'+person.contact.bitbucket" target="_blank">{{person.contact.bitbucket}}</a>
         </div>
         <div>
-          <i class="fa fa-stack-overflow" aria-hidden="true"></i>&nbsp;
-          <a :href="'https://bitbucket.org/'+person.contact.bitbucket" target="_blank">{{person.contact.stackoverflow}}</a>
+          <i class="fa fa-linkedin" aria-hidden="true"></i>&nbsp;
+          <a :href="'https://linkedin.com/in/'+person.contact.linkedin" target="_blank">{{person.name.first}} {{person.name.last}}</a>
         </div>
       </div>
       <div class="right float-right">
@@ -134,15 +137,15 @@ export default Vue.component(name, getVueOptions(name));
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="less" scoped>
-@fade-grey: #e2e2e2;
+@fade-grey: #f6f6f6;
 
 .resume {
-  font-family: "Roboto" !important;
+  font-family:'Raleway', sans-serif;
   padding: 0px 0px 20px;
 }
 .black-bar {
-  height: 136px;
-  background-color: #3f3f3f;
+  height: 156px;
+  background-color: #424242;
   margin-bottom: 20px;
   span {
     display: inline-block;
@@ -157,7 +160,7 @@ export default Vue.component(name, getVueOptions(name));
 .name {
   text-transform: lowercase;
   padding: 18px 0px 0px 0px;
-  margin-bottom: 6px;
+  margin-bottom: 2px;
   font-size: 42px;
   font-weight: 500;
   color: #ffff;
@@ -165,13 +168,20 @@ export default Vue.component(name, getVueOptions(name));
 }
 .p-position {
   text-transform: uppercase;
-  font-size: 16px;
+  font-size: 18px;
+  font-weight: 500;
   color: #ffff;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
   letter-spacing: 2px;
 }
+.nat-age-wrapper {
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 1.2px;
+  color: #ffff;
+}
 a {
-  color: #229eb8;
+  color: #5cc9e1;
 }
 .uppercase {
   text-transform: uppercase;

@@ -12,7 +12,13 @@ function getVueOptions (name) {
     data () {
       return {
         person: yaml.load(PERSON),
-        terms: terms
+        terms: terms,
+        calcAge: function (date) {
+          let birth = new Date(date.year, date.month - 1, date.day);
+          let diff = Date.now() - birth.getTime();
+          let diffDate = new Date(diff);
+          return Math.abs(diffDate.getUTCFullYear() - 1970);
+        }
       };
     },
     computed: {

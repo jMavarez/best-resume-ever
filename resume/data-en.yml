@@ -3,25 +3,46 @@ name:
   first: Josue
   middle:
   last: Mavarez
+
+nationality:
+  name: Venezuelan
+  icon: 🇻🇪
+
 # about: Hi, my name is John Doe. I"m just about the most boring type of person you could
 #       possibly imagine. I like collecting leaves from the tree in my back yard and documenting
 #       each time I eat a peanut that is non-uniform. I am not a robot. Please hire me.
-position: Software Engineer
+
+position: Android Developer
 
 birth:
+  day: 5
+  month: 12
   year: 1995
   location: Buenos Aires, Argentina
 
 experience:
-- company: Baufest
-  position: Software Engineer
-  technologies: Android, Angular, React
+- company: Intive
+  position: Android Developer
   timeperiod: 2018 - now
   location: Buenos Aires, Argentina
-  website: http://www.baufest.com/
-  description: Front-end developer. From mock-ups to production. React / Angular.
+  website: https://www.intive.com/es
+  description: Java, Kotlin, RxJava, Dagger 2
   milestones:
-    - description: Main developer of an ecommerce-like website. Built from scratch a new version of the portal YouMarket using ReactJS, Axios and Rxjs to name a few.
+    - description: Proposition and implementation of Kotlin to the current code base.
+    - description: Worked on Clean Arquitecture driven projects.
+    - description: Worked with architects, engineers, and product management to deliver user-friendly and visually appealing mobile games for the Android platform.
+    - description: Respond to client's needs for applications with an eye to the most feasible and effective solutions.
+    - description: Personal research for WearOS and Kotlin Multiplatform.
+
+- company: Baufest
+  position: Software Developer
+  technologies: Angular, React
+  timeperiod: 2018
+  location: Buenos Aires, Argentina
+  website: http://www.baufest.com/
+  description: Frontend developer. React / Angular.
+  milestones:
+    - description: Main developer of an ecommerce-like website. Built from scratch a new version of the portal YouMarket using ReactJS, Axios and Rxjs, to name a few.
 
 - company: EduTech de Centro América
   position: Fullstack Developer
@@ -31,9 +52,11 @@ experience:
   website: http://www.edutechca.com/
   description: Fullstack developer. Android SDK / RxJava / OkHttp / Angular / PHP / MySQL.
   milestones:
-    - description: Maintenance of their Android app CloudCampus. Improved UI design, implemented new features.
+    - description: Maintenance of their Android app CloudCampus.
       link_text: CloudCampus
       link: https://play.google.com/store/apps/details?id=com.edutechca.cloudcampus&hl=en
+    - description: Improved UI design following Material Design guidelines.
+    - description: Introduce the concept of Reactive Programming for background process.
     - description: Lead developer of a Trello-like project. Plan manager for teachers to keep their study plans organized, keep track of lessons and get some feedback from principals or teachers.
 
 - company: Humbee Partners
@@ -44,7 +67,7 @@ experience:
   website: http://humbee.co/
   description: Freelance Android Developer. Java / Kotlin / RxJava.
   milestones:
-    - description: Join the team as an outsource developer helping debug their app PAZIO. Improved their GpsService implementation. Added new features from mock-ups to production.
+    - description: Join the team as an outsource developer helping in the development of their Uber-like app PAZIO. Improved their GpsService implementation. Added new features from mock-ups to production.
       link_text: PAZIO
       link: https://play.google.com/store/apps/details?id=com.pazio&hl=en
 
@@ -84,14 +107,6 @@ skills:
   level: 85
 - name: Kotlin
   level: 70
-# - name: RxJava
-#   level: 70
-# - name: OkHttp
-#   level: 70
-# - name: Retrofit
-#   level: 70
-# - name: Dagger 2
-#   level: 50
 - name: JavaScript
   level: 90
 - name: TypeScript
