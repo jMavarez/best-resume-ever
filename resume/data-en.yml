@@ -21,9 +21,23 @@ birth:
   location: Buenos Aires, Argentina
 
 experience:
+
+- company: PayPal
+  position: Android Developer
+  timeperiod: 2020 - now
+  location: Buenos Aires, Argentina
+  website: https://www.intive.com/es
+  description: Kotlin, RxJava
+  milestones:
+    - description: Proposition and implementation of Kotlin to the current code base.
+    - description: Worked on Clean Arquitecture driven projects.
+    - description: Worked with architects, engineers, and product management to deliver user-friendly and visually appealing mobile games for the Android platform.
+    - description: Respond to client's needs for applications with an eye to the most feasible and effective solutions.
+    - description: Personal research for WearOS and Kotlin Multiplatform.
+
 - company: Intive
   position: Android Developer
-  timeperiod: 2018 - now
+  timeperiod: 2018 - 2020
   location: Buenos Aires, Argentina
   website: https://www.intive.com/es
   description: Java, Kotlin, RxJava, Dagger 2
